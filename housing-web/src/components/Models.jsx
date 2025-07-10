@@ -75,7 +75,15 @@ const Models = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200">
+                <button 
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contacto');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   Solicitar Cotización
                 </button>
               </div>

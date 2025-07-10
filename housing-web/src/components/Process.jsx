@@ -72,7 +72,14 @@ const Process = () => {
             <p className="text-lg mb-6">
               Agenda tu consulta gratuita y descubre cómo podemos hacer realidad tu sueño de casa propia.
             </p>
-            <button className="bg-white text-amber-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-amber-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={() => {
+                const contactSection = document.getElementById('contacto');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Agendar Consulta
             </button>
           </div>
